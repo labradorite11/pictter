@@ -27,7 +27,7 @@ $_SESSION['access_token_secret'] = $access_token['oauth_token_secret'];
 //     }
 // }
 
-header('Location: ' . "");
+header('Location: ' . "https://photter.herokuapp.com/");
 
 
 
