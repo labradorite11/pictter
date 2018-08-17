@@ -58,7 +58,7 @@ if(isset($_SESSION['access_token'])){
 } else {
 
     $connection = new TwitterOAuth('8rpQ0O2H00CTNscenflNQkVBo','vrxjq0RFc783v4TBGrGhUbX2arooIUcBye4qsHwCecChBGoTJs');
-    $request_token = $connection->oauth("oauth/request_token",array("oauth_callback" => "http://192.168.33.10:8000/callback.php"));
+    $request_token = $connection->oauth("oauth/request_token",array("oauth_callback" => "https://photter.herokuapp.com/"));
 
     $_SESSION['oauth_token'] = $request_token['oauth_token'];
 $_SESSION['oauth_token_secret'] = $request_token['oauth_token_secret'];
