@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<link rel="stylesheet" href="modaal.min.css">
+
+
+<style type="text/css">
+
+.body {
+
+}
+
+.imgitem {
+    width:320px;
+    height:320px;
+    margin:auto;
+    padding:0px;
+    overview:hidden;
+}
+
+.grid {
+    margin-width: 50px;
+}
+.grid-item {
+    background-color: blue;
+  float: center;
+  width: 320px;
+  height: 320px;
+  margin: 5px;
+  padding: 0px;
+  border: 2px solid hsla(0, 0%, 0%, 0.5); */
+}
+
+.grid-item--width2 { width: 160px; }
+.grid-item--height2 { height: 140px; }
+
+</style>
+
+<title>Masonry Test</title>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script src="masonry.pkgd.min.js"></script>
+<script src="modaal.min.js"></script>
+</head>
+
+<body>
+
+<script type="text/javascript">
+$(function() {
+    $('.grid').masonry({
+
+    });
+});
+</script>
+<div class="grid">
+    {grid}
+</div>
+
+{page}
+
+<script type="text/javascript">
+$('.modal').modaal({
+    type: 'image'
+});
+</script>
+</body>
+</html>
