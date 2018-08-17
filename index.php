@@ -32,7 +32,14 @@ if(isset($_SESSION['access_token'])){
         $photo = $status->extended_entities->media;
         if(isset($photo)){
             foreach($photo as $pic){
-                $grid = $grid . "<div class=\"grid-item\"><a href=\"{$pic->media_url}\" class=\"modal\"><img src=\"{$pic->media_url}\" class=\"imgitem\"></a></div>\n";
+                $grid = $grid . "<div class=\"grid-item\"><a href=\"{$pic->media_url}\" class=\"modal\"><img src=\"{$pic->media_url}\" class=\"imgitem\"></a>";
+
+                $screenName = $status->user->screen_name;
+                $statusId = $status->id_str;
+
+                $link = "https://twitter.com/{$screenName}/status/{$statusId}";
+                $grid = $grid . "<a href=\"{$link}\">@{$screenName}</a></div>";
+
                 // $grid = $grid . "<div id=\"modal{$i}\" style=\"display:none;\"><img src=\"{$pic->media_url}\"></div>";
             }
 
